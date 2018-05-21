@@ -1,0 +1,22 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/dp_database
+    username: dp_user
+    password: dp_pass
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    show-sql: false
+    generate-ddl: false
+    database-platform: org.hibernate.dialect.PostgreSQL9Dialect
+    properties:
+      hibernate:
+        temp.use_jdbc_metadata_defaults: false
+        ddl-auto: none
+
+logging:
+  level:
+    org.springframework: ERROR
+    org.ubsfree.bookingapp: DEBUG
